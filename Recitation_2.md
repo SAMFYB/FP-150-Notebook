@@ -3,6 +3,16 @@
 Wednesday 24 January 2018 <br />
 This recitation talks about pattern matching, functions as values, and inductive proof.
 
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+
+
+- [Pattern Matching](#pattern-matching)
+- [Functions are Values](#functions-are-values)
+- [Induction Proof](#induction-proof)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 ## Pattern Matching
 
 What stuff can you pattern match on?
@@ -11,6 +21,10 @@ What stuff can you pattern match on?
 - constructors
 - tuples
 - wildcards
+
+What stuff you cannot pattern match on?
+- non-equality types (e.g. real)
+- function applications (e.g. x + y)
 
 > Examples
 
@@ -65,5 +79,4 @@ acc * fact(x + 1) === acc * (x + 1) * fact(x) (clause 2 of fact)
                   === fact'(x, (x + 1) * acc) (I.H.)
                   === fact'(x + 1, acc)       (clause 2 of fact')
 ```
-
 
