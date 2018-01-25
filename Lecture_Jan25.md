@@ -140,7 +140,7 @@ The evaluation trace of the expression `append ([2, 3], [~5, 7, 10])`:
 
 > Note: There is no mutation of lists here. We are constructing a new list with cons.
 
-The complexity of function `append (L1, L2)` is $O(L1)$.
+The complexity of function `append (L1, L2)` is <img src="https://rawgit.com/SAMFYB/FP-150-Notebook/master/svgs/58135cb090b868dd71bfd5f517f996cb.svg?invert_in_darkmode" align=middle width=45.187395pt height=24.6576pt/>.
 
 In ML, `append` is predefined as a right-associative infix operator `@`.
 
@@ -153,7 +153,7 @@ fun rev ([] : int list) : int list = []
   | rev (x::xs) = (rev xs) @ [x]
 ```
 
-The complexity of this function is $O(L^2)$.
+The complexity of this function is <img src="https://rawgit.com/SAMFYB/FP-150-Notebook/master/svgs/e69e9b0beec7765c89b66ac6c86ab90e.svg?invert_in_darkmode" align=middle width=44.342595pt height=26.76201pt/>.
 
 ### Tail Recursion of Reversal Function
 
