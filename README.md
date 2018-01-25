@@ -8,8 +8,8 @@ The table below is ordered chronologically.
 
 | Session of Notes | Link | Gist | Comment |
 | ---------------- | ---- | ---- | ------- |
-| Recitation 2 | <a href='blob/master/Recitation_2.md'>###</a> | Pattern Matching, Functions as Values, Inductive Proofs | 24 January 2018 |
-| Lecture Jan 25 | <a href='blob/master/Lecture_Jan25.md'>###</a> | Tail Recursion, Extensional Equivalence, List Operations | 25 January 2018 |
+| Recitation 2 | [###]('Recitation_2.md') | Pattern Matching, Functions as Values, Inductive Proofs | 24 January 2018 |
+| Lecture Jan 25 | [###]('Lecture_Jan25.md') | Tail Recursion, Extensional Equivalence, List Operations | 25 January 2018 |
 
 ## Attributions
 
