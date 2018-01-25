@@ -5,8 +5,21 @@ This lecture also talks about some list operations.
 
 The most important topics are __tail recursion__ and __list operations__.
 
-<!-- START doctoc -->
-<!-- END doctoc -->
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+
+
+- [Recursion, Evaluation Trace, Function Specs, and Tail Recursion](#recursion-evaluation-trace-function-specs-and-tail-recursion)
+  - [Evaluation Trace](#evaluation-trace)
+  - [Tail Recursion and Accumulator](#tail-recursion-and-accumulator)
+  - [Function Specs](#function-specs)
+- [Proving a Relative Correctness](#proving-a-relative-correctness)
+- [List Operations](#list-operations)
+  - [The Append Function](#the-append-function)
+  - [The Reversal Function](#the-reversal-function)
+  - [Tail Recursion of Reversal Function](#tail-recursion-of-reversal-function)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 ## Recursion, Evaluation Trace, Function Specs, and Tail Recursion
 
