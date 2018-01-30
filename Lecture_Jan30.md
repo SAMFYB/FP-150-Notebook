@@ -66,3 +66,11 @@ val 3 = height T
 
 > Note: `Int` is a structure, and `Int.max` is a built-in function.
 
+Question: could we run into something cyclical?
+
+> By an inductive proof, we can show there could be __no__ cycles. Most likely in functional programming, we build something from base case and a well-defined constructor. Then we can prove totality. If you somehow want to have cycles: 1) there will be reference cells, 2) there will be "stream" that can somehow mimic cyclical behaviors, 3) as for graphs, we represent the data structure with functions, and that normally will give us cycles.
+
+__Theorem.__ `height` is total. (Essentially, we have to prove it terminates.)
+
+__Proof.__ We prove this by structural induction on the datatype.
+
