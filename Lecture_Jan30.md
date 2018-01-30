@@ -1,5 +1,17 @@
 # Lecture 30 January 2018
 
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+
+
+- [Datatype -- Tree](#datatype----tree)
+  - [Introduction of Datatype](#introduction-of-datatype)
+  - [More with Trees](#more-with-trees)
+  - [Another Type of Trees](#another-type-of-trees)
+    - [Computational Trees](#computational-trees)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 ## Datatype -- Tree
 
 A user-defined recursive datatype.
@@ -19,7 +31,7 @@ _ _    # empty sub-trees - we have to somehow represent those
 
 How do we tell ML about all this?
 
-### Induction of Datatype
+### Introduction of Datatype
 
 ```SML
   datatype tree = Empty | Node of tree * int * tree
@@ -145,6 +157,8 @@ fun flatten' (Leaf x : tree, acc : int list) : int list = x::acc  (* consistent 
 > Note: This new function will ensure linear time.
 >
 > Note: We do __not__ have Empty in this type of tree! Otherwise, the complexity is more complicated.
+
+#### Computational Trees
 
 How is this useful?
 
