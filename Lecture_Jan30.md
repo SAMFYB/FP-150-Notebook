@@ -78,12 +78,33 @@ __Base Case.__ `T = Empty`.
 
 __Want-to-Show.__ `height(Empty) ===> (some value)`.
 
-```
-    height(Empty)                [by clause 1 of height]
+```SML
+     height(Empty)                [by clause 1 of height]
 ===> 0 (* which is a value *)
 ```
 
 __Induction Step.__ `T <> Empty` by assumption, so `T = Node(left, x, right)` for some integer `x` and some trees `left` and `right`.
 
 __Induction Hypothesis.__ `height left ===> (some value) h_l` and `height right ===> (some value) h_r`.
+
+> Be clear about what you're doing. Be pedantic if necessary.
+
+__Want-to-Show.__ `height T ===> (some value)`.
+
+```SML
+     height T
+===> height Node(left, x, right)               [* by referential transparency]
+===> 1 + Int.max(height left, height right)    [by clause 2 of height]
+===> 1 + Int.max(h_l, h_r)                     [by IH, and h_l, h_r are some values]
+===> 1 + h_max                                 [h_max of some value, assuming Int.max is total]
+===> (some value)                              [assuming + is total]
+```
+
+> Note: When we do these proofs, we automatically assume the possible values __typecheck__.
+>
+> Note: In this case, we want a __reduction__ instead of an __equivalence__. An argument for __equivalence__ is in fact weaker.
+
+Question: Do we only use structural induction to prove totality?
+
+> No. We can use structural induction to prove many things. It's powerful!
 
