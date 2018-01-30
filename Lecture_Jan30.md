@@ -108,3 +108,20 @@ Question: Do we only use structural induction to prove totality?
 
 > No. We can use structural induction to prove many things. It's powerful!
 
+> Note: __Reduction__ automatically gives you __extensional equivalence__. But you have to be careful. Especially, if you only have __equivalence__ in the __IH__, then there could be problems.
+
+### Another Type of Trees
+
+Suppose we only want data be held on leaves:
+
+```SML
+  datatype tree = Leaf of int | Node of tree * tree
+```
+
+Consider a function to convert this type of trees into a list (in-order traversal):
+
+```SML
+fun flatten (Leaf x : tree) : int list = [x]
+  | flatten (Node(left, right)) = flatten left @ flatten right
+```
+
