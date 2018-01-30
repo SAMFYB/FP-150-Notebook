@@ -34,3 +34,21 @@ How do we tell ML about all this?
   (* "Node" is also a function -- Node : tree * int * tree -> tree *)
 ```
 
+Some example values of this new datatype:
+
+```
+  1| Empty : tree
+  2| val t1 : tree = Node(Node(Empty, 2, Empty), 1, Empty)
+  3| val t2 : tree = Node(Empty, 3, Node(Empty, 4, Empty))
+  4| val T : tree = Node(t1, 5, t2)
+```
+
+Suppose we want "mutation" at run-time:
+
+```SML
+fun change_to_6 (Node(left, _, right) : tree) : tree = Node(left, 6, right)
+  | change_to_6 Empty = Empty
+```
+
+> Note: There is no actual mutation. The new defined Node shadows the old Node.
+
