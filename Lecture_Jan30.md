@@ -125,3 +125,56 @@ fun flatten (Leaf x : tree) : int list = [x]
   | flatten (Node(left, right)) = flatten left @ flatten right
 ```
 
+Question: What is the time-complexity of this function definition?
+
+> Linear-time if tree is weighted to the right, and quadratic-time if weighted to the left.
+
+Can we do better? Can we ensure linear-time complexity?
+
+> Yes! We can use tail recursion with an accumulator.
+
+```SML
+(* flatten' : tree * int list -> int list
+ * REQUIRES: true
+ * ENSURES: flatten'(T, acc) === flatten(T) @ acc
+ *)
+fun flatten' (Leaf x : tree, acc : int list) : int list = x::acc  (* consistent with spec *)
+  | flatten' (Node(left, right), acc) = flatten' (left, flatten' (right, acc))
+```
+
+> Note: This new function will ensure linear time.
+>
+> Note: We do __not__ have Empty in this type of tree! Otherwise, the complexity is more complicated.
+
+How is this useful?
+
+> Consider an operator-operand tree.
+
+```
+    *
+  max (4)
+(3) (7)
+```
+
+> Consider a computational tree.
+
+```SML
+datatype optree = Val of int
+                | Op of optree * (int * int -> int) * optree
+val computation : optree = Op(Op(Val 3, Int.max, Val 7), op*, Val 4)
+(* For op*, we can also put a lambda expression. *)
+```
+
+> Note: `*` is basically a syntactic sugar for `op *`.
+
+Consider a function to evaluate a computational tree:
+
+```SML
+(* eval : optree -> int
+ * REQUIRES: all function in T total
+ * ENSURES: eval T gives the expected computational result
+ *)
+fun eval (Val x : optree) : int = x
+  | eval (Op(left, func, right)) = func (eval left, eval right)
+```
+
