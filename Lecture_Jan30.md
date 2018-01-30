@@ -36,7 +36,7 @@ How do we tell ML about all this?
 
 Some example values of this new datatype:
 
-```
+```SML
   1| Empty : tree
   2| val t1 : tree = Node(Node(Empty, 2, Empty), 1, Empty)
   3| val t2 : tree = Node(Empty, 3, Node(Empty, 4, Empty))
@@ -51,4 +51,18 @@ fun change_to_6 (Node(left, _, right) : tree) : tree = Node(left, 6, right)
 ```
 
 > Note: There is no actual mutation. The new defined Node shadows the old Node.
+
+### More with Trees
+
+Consider a function to define the height of a tree:
+
+```SML
+(* height : tree -> int *)
+fun height (Empty : tree) : int = 0
+  | height (Node(left, _, right)) = 1 + Int.max(height left, height right)
+
+val 3 = height T
+```
+
+> Note: `Int` is a structure, and `Int.max` is a built-in function.
 
