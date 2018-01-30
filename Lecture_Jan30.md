@@ -83,5 +83,7 @@ __Want-to-Show.__ `height(Empty) ===> (some value)`.
 ===> 0 (* which is a value *)
 ```
 
-__Induction Step.__
+__Induction Step.__ `T <> Empty` by assumption, so `T = Node(left, x, right)` for some integer `x` and some trees `left` and `right`.
+
+__Induction Hypothesis.__ `height left ===> (some value) h_l` and `height right ===> (some value) h_r`.
 
