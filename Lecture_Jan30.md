@@ -74,3 +74,14 @@ __Theorem.__ `height` is total. (Essentially, we have to prove it terminates.)
 
 __Proof.__ We prove this by structural induction on the datatype.
 
+__Base Case.__ `T = Empty`.
+
+__Want-to-Show.__ `height(Empty) ===> (some value)`.
+
+```
+    height(Empty)                [by clause 1 of height]
+===> 0 (* which is a value *)
+```
+
+__Induction Step.__
+
