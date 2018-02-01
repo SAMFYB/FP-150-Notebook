@@ -6,6 +6,8 @@ There are more actual source codes in my repo [SML Collection](https://github.co
 
 > PDF version of the notes are in the `pdfs` folder.
 
+> Note: If you're viewing this as a webpage, I recommend [View on GitHub](https://github.com/SAMFYB/FP-150-Notebook) or get the PDF versions on GitHub. This is because the SVG images in the notes are NOT rendered correctly on webpages.
+
 ## Table of Contents
 
 The table below is ordered chronologically.
