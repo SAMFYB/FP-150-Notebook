@@ -4,6 +4,8 @@ This is my notebook for Carnegie Mellon 15-150 Principles of Functional Programm
 
 There are more actual source codes in my repo [SML Collection](https://github.com/SAMFYB/SML-collection).
 
+> PDF version of the notes are in the `pdfs` folder.
+
 ## Table of Contents
 
 The table below is ordered chronologically.
