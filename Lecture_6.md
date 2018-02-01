@@ -53,9 +53,9 @@ Now, let's analyze the function `rev`.
 
 `rev` has one argument. Let `n` be the length of the list.
 
-For `n = 0`, $W(0) = c_0$, which is a constant.
+For `n = 0`, <img src="https://rawgit.com/SAMFYB/FP-150-Notebook/master/svgs/e3f23706bb66633b8a71bd8460c1f650.svg?invert_in_darkmode" align=middle width=74.397015pt height=24.6576pt/>, which is a constant.
 
-For `n >= 1`, $W(n) = c_1 + W_@(n-1,1) + W(n-1)$.
+For `n >= 1`, <img src="https://rawgit.com/SAMFYB/FP-150-Notebook/master/svgs/1ecc390c60f43813584ce33525117b0b.svg?invert_in_darkmode" align=middle width=278.745555pt height=24.6576pt/>.
 
 > Note: In order to determine the arguments for the complexity of `append` used here, we have to know that function `rev` does not change the length of the list input.
 
@@ -71,7 +71,7 @@ We know the complexity of the function `append`, so we can substitute and contin
          == (n)(k0') + (k1')(1 +...+ n) + k0
 ```
 
-Thus, we __conjecture__ this is of order $n^2$.
+Thus, we __conjecture__ this is of order <img src="https://rawgit.com/SAMFYB/FP-150-Notebook/master/svgs/021273d50c6ff03efebda428e9e42d77.svg?invert_in_darkmode" align=middle width=16.41948pt height=26.76201pt/>.
 
 ### The Tail Recursive `rev`
 
@@ -82,11 +82,11 @@ fun trev (nil : int list, acc : int list) : int list = acc
   | trev (x::xs, acc) = trev(xs, x::acc)
 ```
 
-Consider $n$ the length of first list, $m$ the length of the accumulator.
+Consider <img src="https://rawgit.com/SAMFYB/FP-150-Notebook/master/svgs/55a049b8f161ae7cfeb0197d75aff967.svg?invert_in_darkmode" align=middle width=9.867pt height=14.15535pt/> the length of first list, <img src="https://rawgit.com/SAMFYB/FP-150-Notebook/master/svgs/0e51a2dede42189d77627c4d742822c3.svg?invert_in_darkmode" align=middle width=14.43321pt height=14.15535pt/> the length of the accumulator.
 
-For `n = 0`, $W(0, m) = c_0$. We are just returning, __not__ copying anything.
+For `n = 0`, <img src="https://rawgit.com/SAMFYB/FP-150-Notebook/master/svgs/4254a7fee1ae66eeb746ebc9a500df37.svg?invert_in_darkmode" align=middle width=96.13593pt height=24.6576pt/>. We are just returning, __not__ copying anything.
 
-For `n >= 1`, $W(n, m) = c_1 + W(n-1, m+1)$.
+For `n >= 1`, <img src="https://rawgit.com/SAMFYB/FP-150-Notebook/master/svgs/f2b9e088938cc0beed3bf71344d35575.svg?invert_in_darkmode" align=middle width=237.517005pt height=24.6576pt/>.
 
 > Note: It's important to think carefully about the __size__ of the arguments.
 
@@ -106,19 +106,19 @@ fun sum (Empty : tree) : int = 0
 
 Let's consider the complexity of the function `sum`.
 
-Consider "work" in terms of the size of the tree $n$.
+Consider "work" in terms of the size of the tree <img src="https://rawgit.com/SAMFYB/FP-150-Notebook/master/svgs/55a049b8f161ae7cfeb0197d75aff967.svg?invert_in_darkmode" align=middle width=9.867pt height=14.15535pt/>.
 
 > Note: Sometimes we consider "work" or "span" in terms of the __depth__ of the tree.
 
-> Important: The size $n$ here refers to the number of __nodes__. Sometimes we might want it different.
+> Important: The size <img src="https://rawgit.com/SAMFYB/FP-150-Notebook/master/svgs/55a049b8f161ae7cfeb0197d75aff967.svg?invert_in_darkmode" align=middle width=9.867pt height=14.15535pt/> here refers to the number of __nodes__. Sometimes we might want it different.
 
-For `n = 0`, $W(0) = c_0$, a constant, for an `Empty` tree.
+For `n = 0`, <img src="https://rawgit.com/SAMFYB/FP-150-Notebook/master/svgs/e3f23706bb66633b8a71bd8460c1f650.svg?invert_in_darkmode" align=middle width=74.397015pt height=24.6576pt/>, a constant, for an `Empty` tree.
 
-For a non-`Empty` tree, $W(n) = c_1 + W(n_{left}) + W(n_{right})$.
+For a non-`Empty` tree, <img src="https://rawgit.com/SAMFYB/FP-150-Notebook/master/svgs/5d609be6cda20e20d5ecee776e348864.svg?invert_in_darkmode" align=middle width=253.335555pt height=24.6576pt/>.
 
-We also know that $n_{left} + n_{right} = n$.
+We also know that <img src="https://rawgit.com/SAMFYB/FP-150-Notebook/master/svgs/ce43541aa5d2e3c25f54d1ee14ab55c7.svg?invert_in_darkmode" align=middle width=126.97575pt height=19.17828pt/>.
 
-__Conjecture:__ $W(n)\leq k_1 + k_2\cdot n$.
+__Conjecture:__ <img src="https://rawgit.com/SAMFYB/FP-150-Notebook/master/svgs/1501eddc53532a2bb87564a1eec93b1e.svg?invert_in_darkmode" align=middle width=136.073025pt height=24.6576pt/>.
 
-> Consider: In fact, considering the work done in each `Node`, should be all $c_1$.
+> Consider: In fact, considering the work done in each `Node`, should be all <img src="https://rawgit.com/SAMFYB/FP-150-Notebook/master/svgs/988584bba6844388f07ea45b7132f61c.svg?invert_in_darkmode" align=middle width=13.666455pt height=14.15535pt/>.
 
