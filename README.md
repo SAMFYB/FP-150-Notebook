@@ -21,3 +21,5 @@ The table below is ordered chronologically.
 
 The table of contents generated in the notes are using <a href='https://github.com/thlorenz/doctoc'> doctoc </a>.
 
+The mathematical images generated in the notes are using <a href='https://github.com/leegao/readme2tex'> readme2tex </a>.
+
