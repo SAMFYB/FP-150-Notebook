@@ -19,6 +19,8 @@ fun rev (nil : int list) : int list = nil
   | rev (x::xs) = (rev xs) @ [x]
 ```
 
+### The `append` Function
+
 So `@` has two arguments. Consider `n` length of first list, `m` length of second list.
 
 Analyze "work" of the function: <img src="https://rawgit.com/SAMFYB/FP-150-Notebook/master/svgs/1a0256f96451d8b12fa5a64f0b254178.svg?invert_in_darkmode" align=middle width=62.199555pt height=24.6576pt/>.
@@ -44,4 +46,79 @@ This is called "unrolling the recurrence".
 By observation, we can __conjecture__ the complexity is linear.
 
 Then, we can prove this formally by __induction__.
+
+### The `rev` Function
+
+Now, let's analyze the function `rev`.
+
+`rev` has one argument. Let `n` be the length of the list.
+
+For `n = 0`, $W(0) = c_0$, which is a constant.
+
+For `n >= 1`, $W(n) = c_1 + W_@(n-1,1) + W(n-1)$.
+
+> Note: In order to determine the arguments for the complexity of `append` used here, we have to know that function `rev` does not change the length of the list input.
+
+We know the complexity of the function `append`, so we can substitute and continue our analysis:
+
+```
+    W(n) <= k0 + k1(n - 1) + W(n - 1)
+         <= k0' + k1'(n) + W(n - 1)
+         ::
+         <= k0' + k1'(n) + k0' + k1'(n - 1) + W(n - 2)
+         <= k0' + k1'(n) + k0' + k1'(n - 1) + k0' + k1'(n - 2) + W(n - 3)
+         <= ...
+         == (n)(k0') + (k1')(1 +...+ n) + k0
+```
+
+Thus, we __conjecture__ this is of order $n^2$.
+
+### The Tail Recursive `rev`
+
+Now, let's analyze the *tail recursive* version of the function.
+
+```SML
+fun trev (nil : int list, acc : int list) : int list = acc
+  | trev (x::xs, acc) = trev(xs, x::acc)
+```
+
+Consider $n$ the length of first list, $m$ the length of the accumulator.
+
+For `n = 0`, $W(0, m) = c_0$. We are just returning, __not__ copying anything.
+
+For `n >= 1`, $W(n, m) = c_1 + W(n-1, m+1)$.
+
+> Note: It's important to think carefully about the __size__ of the arguments.
+
+By observing the recurrent structure, we __conjecture__ this is again of linear time.
+
+## Analysis of Trees
+
+Consider this definition of the datatype `tree`:
+
+```SML
+datatype tree = Empty | Node of tree * int * tree
+
+(* sum : tree -> int *)
+fun sum (Empty : tree) : int = 0
+  | sum (Node (left, x, right) = sum left + x + sum right
+```
+
+Let's consider the complexity of the function `sum`.
+
+Consider "work" in terms of the size of the tree $n$.
+
+> Note: Sometimes we consider "work" or "span" in terms of the __depth__ of the tree.
+
+> Important: The size $n$ here refers to the number of __nodes__. Sometimes we might want it different.
+
+For `n = 0`, $W(0) = c_0$, a constant, for an `Empty` tree.
+
+For a non-`Empty` tree, $W(n) = c_1 + W(n_{left}) + W(n_{right})$.
+
+We also know that $n_{left} + n_{right} = n$.
+
+__Conjecture:__ $W(n)\leq k_1 + k_2\cdot n$.
+
+> Consider: In fact, considering the work done in each `Node`, should be all $c_1$.
 
