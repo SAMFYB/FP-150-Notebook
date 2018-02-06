@@ -118,3 +118,24 @@ Therefore, the total amount of work is `n log n`.
 
 <p align="center"><img src="https://rawgit.com/SAMFYB/FP-150-Notebook/master/svgs/90ab8386bfd5069668b62daf6225455e.svg?invert_in_darkmode" align=middle width=254.9844pt height=29.474115pt/></p>
 
+## The Concept of "Sorted" in Trees
+
+- `Empty` is sorted
+- `Node(L, x, R)` is sorted iff
+  - `L` is sorted & `y <= x` for all `y` in `L`
+  - `R` is sorted & `z >= x` for all `z` in `R`
+
+## Inserting into a Tree
+
+```SML
+(* Ins : int * tree -> tree
+ * REQ: T is sorted
+ * ENS: Ins (x, T) is a sorted tree consisting the elements of T & x
+ *)
+fun Ins (x : int, Empty : tree) : tree = Node(Empty, x, Empty)
+  | Ins (x, Node(L, y, R)) =
+    case Int.compare(x, y) of
+      GREATER => Node(L, y, Ins(x, R))
+    | _ => Node(Ins(x, L), y, R)
+```
+
