@@ -18,6 +18,7 @@ The table below is ordered chronologically.
 | Lecture Jan 25 | [###](Lecture_Jan25.md) | Tail Recursion, Extensional Equivalence, List Operations | 25 January 2018 |
 | Lecture Jan 30 | [###](Lecture_Jan30.md) | Datatype, Tree (Representation and Use), Structural Induction | 30 January 2018 |
 | Lecture 6 | [###](Lecture_6.md) | Asymptotic Analysis, Trees, Sorting | 1 February 2018 |
+| Lecture 7 | [###](Lecture_7.md) | Merge Sort, Asymptotic Analysis | 6 February 2018 |
 
 ## Attributions
 
