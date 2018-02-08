@@ -1,5 +1,18 @@
 # Lecture 8
 
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+
+
+- [Revisit Insert in Trees](#revisit-insert-in-trees)
+- [Revisit Merge Sort](#revisit-merge-sort)
+  - [Merge Sort on Trees](#merge-sort-on-trees)
+  - [Analyzing Merge Sort on Trees](#analyzing-merge-sort-on-trees)
+  - [Summary of Merge Sort](#summary-of-merge-sort)
+  - [A Peek into Rebalancing](#a-peek-into-rebalancing)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 ## Revisit Insert in Trees
 
 ```SML
