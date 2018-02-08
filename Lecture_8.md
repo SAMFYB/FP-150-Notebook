@@ -10,13 +10,13 @@ fun Ins(x, Empty) = Node(Empty, x, Empty)
     | _ => Node(Ins(x, L), y, R)
 ```
 
-The Work and Span are both $O(n)$. Or in fact, it is also $O(d)$. In the worst case, $d = n$.
+The Work and Span are both <img src="https://rawgit.com/SAMFYB/FP-150-Notebook/master/svgs/1f08ccc9cd7309ba1e756c3d9345ad9f.svg?invert_in_darkmode" align=middle width=35.647755pt height=24.6576pt/>. Or in fact, it is also <img src="https://rawgit.com/SAMFYB/FP-150-Notebook/master/svgs/740010a0c1bf39b159892c43824d4144.svg?invert_in_darkmode" align=middle width=34.33683pt height=24.6576pt/>. In the worst case, <img src="https://rawgit.com/SAMFYB/FP-150-Notebook/master/svgs/5d27b4b70b753caa9e77537a78ef2617.svg?invert_in_darkmode" align=middle width=40.34052pt height=22.83138pt/>.
 
-For balanced trees, $d = O(log(n))$.
+For balanced trees, <img src="https://rawgit.com/SAMFYB/FP-150-Notebook/master/svgs/f12b96a49c42534c2471e8d45ba49147.svg?invert_in_darkmode" align=middle width=100.53351pt height=24.6576pt/>.
 
 ## Revisit Merge Sort
 
-Can we optimize the Span to be a polynomial of $log(n)$?
+Can we optimize the Span to be a polynomial of <img src="https://rawgit.com/SAMFYB/FP-150-Notebook/master/svgs/a9fbace32ecc719928919305b91b2c32.svg?invert_in_darkmode" align=middle width=44.27907pt height=24.6576pt/>?
 
 ### Merge Sort on Trees
 
@@ -78,35 +78,23 @@ fun SplitAt (_ : int, Empty : tree) : tree * tree = (Empty, Empty)
 
 ### Analyzing Merge Sort on Trees
 
-$$ \begin{align}
-  & S_{Ins}(d)          &= O(d) \\
-  & S_{SplitAt}(d)      &\leq c_1 + S_{SplitAt}(d-1) = O(d) \\
-  & S_{Merge}(d_1, d_2) &\leq c_1 + S_{SplitAt}(d_2) + max(S_{Merge}(d_1-1, d_2), S_{Merge}(d_1-1, d_2)) \\
-  &                     &\leq c_1 + c_2 d_2 + S_{Merge}(d_1-1, d_2) \\
-  &                     &\leq c_3 d_1 d_2 \\
-  &                     &= O(d_1 d_2) \\
-  & S_{Msort}(d) &\leq c_1 + max(S_{Msort}(d-1), S_{Msort}(d-1)) + S_{Merge}(d_1, d_2) + S_{Ins}(d_1+d_2)
-\end{align} $$
+<p align="center"><img src="https://rawgit.com/SAMFYB/FP-150-Notebook/master/svgs/63e90af8af5497b0e8c74943d790079e.svg?invert_in_darkmode" align=middle width=659.49015pt height=164.977065pt/></p>
 
 Now what?
 
-Assuming trees are __balanced__, so $d=O(log(n))$, also assuming `Msort` returns balanced trees,
+Assuming trees are __balanced__, so <img src="https://rawgit.com/SAMFYB/FP-150-Notebook/master/svgs/a45b6389352fe6842a7ab7347c4e39d1.svg?invert_in_darkmode" align=middle width=100.53351pt height=24.6576pt/>, also assuming `Msort` returns balanced trees,
 
 > Side Note: By the fact that we're stuck on the analysis now, it appears that we have not fully accomplished what we want with our current code.
 
-$$ \begin{align}
-  S_{Msort} &\leq c_1 + S_{Msort}(d-1) + S_{Merge}(d, d) + S_{Ins}(2d) \\
-            &\leq c_1 c_2 d^2 + c_3 d + S_{Msort}(d-1) \\
-            &= O(d^3)
-\end{align} $$
+<p align="center"><img src="https://rawgit.com/SAMFYB/FP-150-Notebook/master/svgs/68bf034989b2fcd100518b16a5806a01.svg?invert_in_darkmode" align=middle width=393.05145pt height=69.83031pt/></p>
 
 ### Summary of Merge Sort
 
 |                       | Work | Span |
 | --------------------- | ---- | ---- |
-| Insertion Sort (list) | $O(n^2)$ | $O(n^2)$ |
-| Merge Sort (list)     | $O(nlogn)$ | $O(n)$ |
-| Merge Sort (tree)     | $O(nlogn)$ | $O((logn)^3)$ |
+| Insertion Sort (list) | <img src="https://rawgit.com/SAMFYB/FP-150-Notebook/master/svgs/3987120c67ed5a9162aa9841b531c3a9.svg?invert_in_darkmode" align=middle width=43.022265pt height=26.76201pt/> | <img src="https://rawgit.com/SAMFYB/FP-150-Notebook/master/svgs/3987120c67ed5a9162aa9841b531c3a9.svg?invert_in_darkmode" align=middle width=43.022265pt height=26.76201pt/> |
+| Merge Sort (list)     | <img src="https://rawgit.com/SAMFYB/FP-150-Notebook/master/svgs/743c00b1fa7d59c887892656948b54b8.svg?invert_in_darkmode" align=middle width=67.14147pt height=24.6576pt/> | <img src="https://rawgit.com/SAMFYB/FP-150-Notebook/master/svgs/1f08ccc9cd7309ba1e756c3d9345ad9f.svg?invert_in_darkmode" align=middle width=35.647755pt height=24.6576pt/> |
+| Merge Sort (tree)     | <img src="https://rawgit.com/SAMFYB/FP-150-Notebook/master/svgs/743c00b1fa7d59c887892656948b54b8.svg?invert_in_darkmode" align=middle width=67.14147pt height=24.6576pt/> | <img src="https://rawgit.com/SAMFYB/FP-150-Notebook/master/svgs/4043208c5a0e3737ed883304b0a8d55e.svg?invert_in_darkmode" align=middle width=77.4345pt height=26.76201pt/> |
 
 ### A Peek into Rebalancing
 
@@ -123,5 +111,5 @@ fun rebalance (Empty : tree) : tree = Empty
     end
 ```
 
-The Work of rebalancing is $O(n)$, and the Span is $O((logn)^2)$.
+The Work of rebalancing is <img src="https://rawgit.com/SAMFYB/FP-150-Notebook/master/svgs/1f08ccc9cd7309ba1e756c3d9345ad9f.svg?invert_in_darkmode" align=middle width=35.647755pt height=24.6576pt/>, and the Span is <img src="https://rawgit.com/SAMFYB/FP-150-Notebook/master/svgs/a0cc370b2cb245937aaf1a5438fc8368.svg?invert_in_darkmode" align=middle width=77.4345pt height=26.76201pt/>.
 
