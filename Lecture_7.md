@@ -1,5 +1,19 @@
 # Lecture 7 Sorting
 
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+
+
+- [Merge Sort Revisit](#merge-sort-revisit)
+- [Code on Merge Sort](#code-on-merge-sort)
+- [Analyzing the Work](#analyzing-the-work)
+  - [The Work of the Helpers](#the-work-of-the-helpers)
+  - [The Work of `msort`](#the-work-of-msort)
+- [The Concept of "Sorted" in Trees](#the-concept-of-sorted-in-trees)
+- [Inserting into a Tree](#inserting-into-a-tree)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 ## Merge Sort Revisit
 
 Optimal complexity for sequential computation: __Merge Sort__ (divide & conquer)
