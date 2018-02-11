@@ -32,3 +32,13 @@ __Exam.__ We are looking for 1. Recurrence, 2. Summation, 3. Big-O bound.
 
 > Note: This is also of $O(log(n))$.
 
+## Totality
+
+### Definition
+
+A function `f` is total if for any valid input __value__ `v`, `f v` always reduces to a __value__.
+
+Consider: `f (g ())` $\cong$ `1`?
+
+This is wrong! `g ()` might not reduce to a __value__. (In fact, we have to know the totality of `g`.)
+
