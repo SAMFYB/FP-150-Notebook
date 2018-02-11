@@ -24,3 +24,13 @@ fun Find (x, Empty) = false
 
 <p align="center"><img src="https://rawgit.com/SAMFYB/FP-150-Notebook/master/svgs/9c9cb0a05948ad4e9ac278f4a3582153.svg?invert_in_darkmode" align=middle width=230.8185pt height=164.907765pt/></p>
 
+__Exam.__ We are looking for 1. Recurrence, 2. Summation, 3. Big-O bound.
+
+$$ \begin{align}
+  S(0) &= k_0 \\
+  S(d) &= k_1 + S(d-1) \\
+       &= k_1 + (k_1 + S(d-2)) \\
+       &= ... \\
+       &= d \cdot k_1 + k_0
+\end{align} $$
+
