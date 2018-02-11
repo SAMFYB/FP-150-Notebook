@@ -19,6 +19,8 @@ The table below is ordered chronologically.
 | Lecture Jan 30 | [###](Lecture_Jan30.md) | Datatype, Tree (Representation and Use), Structural Induction | 30 January 2018 |
 | Lecture 6 | [###](Lecture_6.md) | Asymptotic Analysis, Trees, Sorting | 1 February 2018 |
 | Lecture 7 | [###](Lecture_7.md) | Merge Sort, Asymptotic Analysis | 6 February 2018 |
+| Lecture 8 | [###](Lecture_8.md) | Merge Sort on Trees & Analysis | 8 February 2018 |
+| Midterm 1 Review | [###](Midterm_1_Review.md) | Asymptotic Analysis, Totality, Tail Recursion | 11 February 2018 |
 
 ## Attributions
 
