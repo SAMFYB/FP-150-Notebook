@@ -42,3 +42,5 @@ Consider: `f (g ())` <img src="https://rawgit.com/SAMFYB/FP-150-Notebook/master/
 
 This is wrong! `g ()` might not reduce to a __value__. (In fact, we have to know the totality of `g`.)
 
+> Note: `f` could be total while a non-valid input could break it.
+
