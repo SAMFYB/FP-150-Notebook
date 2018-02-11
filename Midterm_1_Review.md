@@ -1,5 +1,17 @@
 # Midterm 1 Review
 
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+
+
+- [Work Analysis](#work-analysis)
+  - [Work/Span Analysis of the Above Function regarding Size](#workspan-analysis-of-the-above-function-regarding-size)
+- [Totality](#totality)
+  - [Definition](#definition)
+- [Tail Recursion](#tail-recursion)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 ## Work Analysis
 
 ```SML
