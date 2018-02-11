@@ -44,3 +44,13 @@ This is wrong! `g ()` might not reduce to a __value__. (In fact, we have to know
 
 > Note: `f` could be total while a non-valid input could break it.
 
+## Tail Recursion
+
+```SML
+fun fact (0 : int) : int = 1
+  | fact x = x * fact (x - 1)
+
+fun fact' (0 : int, Acc : int) = Acc
+  | fact' (x, Acc) = fact' (x - 1, x * Acc)
+```
+
