@@ -100,3 +100,5 @@ Consider: `fun g (x, y) = x + y` could be both `fn : int -> int` and `fn : real 
 
 > Note: `+` is simply __overloaded__, NOT polymorphic.
 
+Consider: `fun f x = f x` has type `fn : 'a -> 'b`.
+
