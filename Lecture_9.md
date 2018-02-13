@@ -24,6 +24,8 @@
 
 ## Polymorphism
 
+### A Polymorphic List
+
 __Question.__ How do we define a list type that can take any types of elements?
 
 > We need a "__type variable__".
@@ -45,4 +47,29 @@ Consider the type of the following lists:
 > Note: `int list` is an "__instance__" of `'a list`.
 
 Consider: `[[]] : 'a list list`.
+
+### A Polymorphic Tree
+
+```SML
+datatype 'a tree = Empty | Node of 'a tree * 'a * 'a tree
+
+(* trav : 'a tree -> 'a list *)
+fun trav (Empty : 'a tree) : 'a list = []
+  | trav (Node(L, x, R)) = (trav L) @ (x :: (trav v))
+```
+
+> Note: `@` is polymorphic, so we're good. This definition is purely structural.
+
+### Zip
+
+```SML
+(* zip : 'a list * 'b list -> ('a * 'b) list
+ * REQ: true
+ * ENS: zip ([a1,..., am], [b1,..., bn]) === [(a1, b1),..., (ak, bk)], k = min(n, m)
+ *)
+fun zip (nil : 'a list, _ : 'b list) : ('a * 'b) list = []
+  | zip (_, nil) = []
+  | zip (a::xs, b::ys) = (a, b) :: (zip (xs, ys))
+(* This is a demonstration of double polymorphism. *)
+```
 
