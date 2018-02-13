@@ -102,3 +102,15 @@ Consider: `fun g (x, y) = x + y` could be both `fn : int -> int` and `fn : real 
 
 Consider: `fun f x = f x` has type `fn : 'a -> 'b`.
 
+> Note: Function applications are associative __to the left__.
+
+Thus, consider the following function application:
+
+```SML
+fun id x = x
+id id 42 (* This is same as the following line. *)
+(id id) 42
+```
+
+The left most `id` has type `('a -> 'a) -> ('a -> 'a)`.
+
