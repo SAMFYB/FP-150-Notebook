@@ -90,3 +90,13 @@ fun lookup (_ : 'a * 'a -> bool, _ : 'a, [] : ('a * 'b) list) : 'b option = NONE
 
 > Note: If we simply use `=` in place of `EQ` function, ML will give warning and force using __equality types__. If the above type annotation exists, it will thus conflict with ML warning and ML will give a __type error__.
 
+## Type Inference
+
+In deciding whether an expression `e` has a type ML solves a "bunch" of type constraint equations and determines the most general type consistent with the constraints.
+
+Consider: `fun f x = x + 1` has type `fn : int -> int`. This is because while `+` is __overloaded__, `1` is definitely `int`.
+
+Consider: `fun g (x, y) = x + y` could be both `fn : int -> int` and `fn : real -> real`, BUT ML defaults to `fn : int -> int`.
+
+> Note: `+` is simply __overloaded__, NOT polymorphic.
+
