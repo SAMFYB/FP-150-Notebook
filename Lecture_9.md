@@ -73,3 +73,20 @@ fun zip (nil : 'a list, _ : 'b list) : ('a * 'b) list = []
 (* This is a demonstration of double polymorphism. *)
 ```
 
+## Option
+
+__Question.__ If you want to find something, but it's not necessarily there, what do we do?
+
+```SML
+datatype 'a option = NONE | SOME of 'a
+
+(* lookup : ('a * 'a -> bool) * 'a * ('a * 'b) list -> 'b option *)
+fun lookup (_ : 'a * 'a -> bool, _ : 'a, [] : ('a * 'b) list) : 'b option = NONE
+  | lookup (EQ, x, (a, b) :: L) =
+    case EQ (x, a) of
+      true => SOME b
+    | false => lookup (EQ, x, L)
+```
+
+> Note: If we simply use `=` in place of `EQ` function, ML will give warning and force using __equality types__. If the above type annotation exists, it will thus conflict with ML warning and ML will give a __type error__.
+
