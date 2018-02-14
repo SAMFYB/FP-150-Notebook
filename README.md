@@ -21,10 +21,11 @@ The table below is ordered chronologically.
 | Lecture 7 | [###](Lecture_7.md) | Merge Sort, Asymptotic Analysis | 6 February 2018 |
 | Lecture 8 | [###](Lecture_8.md) | Merge Sort on Trees & Analysis | 8 February 2018 |
 | Midterm 1 Review | [###](Midterm_1_Review.md) | Asymptotic Analysis, Totality, Tail Recursion | 11 February 2018 |
+| Lecture 9 | [###](Lecture_9.md) | Polymorphism, Option Type, Type Inference | 13 February 2018 |
 
 ## Attributions
 
-The table of contents generated in the notes are using <a href='https://github.com/thlorenz/doctoc'> doctoc </a>.
+The table of contents generated in the notes are using <a href='https://github.com/thlorenz/doctoc'>doctoc</a>.
 
-The mathematical images generated in the notes are using <a href='https://github.com/leegao/readme2tex'> readme2tex </a>.
+The mathematical images generated in the notes are using <a href='https://github.com/leegao/readme2tex'>readme2tex</a>.
 
