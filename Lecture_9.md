@@ -14,7 +14,7 @@
 - Equivalence
 - Totality
 - Induction
-- * Proof of Correctness
+- Proof of Correctness
 
 ## Preview: Where are we heading?
 
