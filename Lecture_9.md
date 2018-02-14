@@ -1,7 +1,19 @@
 # Lecture 9
 
-<!-- START doctoc -->
-<!-- END doctoc -->
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+
+
+- [Review: What have we seen so far?](#review-what-have-we-seen-so-far)
+- [Preview: Where are we heading?](#preview-where-are-we-heading)
+- [Polymorphism](#polymorphism)
+  - [A Polymorphic List](#a-polymorphic-list)
+  - [A Polymorphic Tree](#a-polymorphic-tree)
+  - [Zip](#zip)
+- [Option](#option)
+- [Type Inference](#type-inference)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 ## Review: What have we seen so far?
 
