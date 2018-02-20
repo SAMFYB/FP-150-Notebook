@@ -118,3 +118,14 @@ val convert_to_string = map Int.toString
 convert_to_string [2, 4, ~1] ==> ["2", "4", "~1"]
 ```
 
+### Another Important List Function
+
+```SML
+(* foldl / foldr : ('a * 'b -> 'b) -> 'b -> 'a list -> 'b
+ * foldl f z [x1,...xn] === f(xn,... f(x3, f(x2, f(x1, z))))
+ * e.g. foldl (op +) 0 [1, 2, 3, 4] = 10 (foldr same here)
+ * e.g. foldl (op -) 0 [1, 2, 3, 4] = 2
+ *      foldr (op -) 0 [1, 2, 3, 4] = ~2
+ *)
+```
+
