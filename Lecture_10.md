@@ -98,3 +98,22 @@ This is because `filter : ('a -> bool) -> 'a list -> 'a list`. Here, `filter (..
 
 Consider `filter (fn _ => true)`. This application has type `'a list -> 'a list`. It is extensionally equivalent to the identity function on lists.
 
+Consider another function definition.
+
+```SML
+(* map : ('a -> 'b) -> 'a list -> 'b list
+ * REQ: true (we may want f total)
+ * ENS: map f [x1,...,xn] === [f(x1),...,f(xn)]
+ *)
+fun map (f : 'a -> 'b) ([] : 'a list) : 'b list = []
+  | map f (x::xs) = (f x) :: (map f xs)
+```
+
+```
+    map Int.toString [1, 2, 3]
+==> ["1", "2", "3"]
+
+val convert_to_string = map Int.toString
+(* convert_to_string : int list -> string list *)
+```
+
