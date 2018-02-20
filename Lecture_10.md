@@ -115,5 +115,6 @@ fun map (f : 'a -> 'b) ([] : 'a list) : 'b list = []
 
 val convert_to_string = map Int.toString
 (* convert_to_string : int list -> string list *)
+convert_to_string [2, 4, ~1] ==> ["2", "4", "~1"]
 ```
 
