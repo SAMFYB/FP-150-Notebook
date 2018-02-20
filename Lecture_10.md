@@ -1,5 +1,19 @@
 # Lecture 10 Curried Functions & Higher-Order Functions
 
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+
+
+- [Review of Function Definition, Evaluation, & Binding](#review-of-function-definition-evaluation--binding)
+- [Currying](#currying)
+- [Higher-Order Functions](#higher-order-functions)
+  - [The Map on List](#the-map-on-list)
+  - [Another Important List Function](#another-important-list-function)
+  - [Some Other Interesting Functions](#some-other-interesting-functions)
+  - [I Don't Know What This is Doing](#i-dont-know-what-this-is-doing)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 ## Review of Function Definition, Evaluation, & Binding
 
 Consider the definition of a function:
