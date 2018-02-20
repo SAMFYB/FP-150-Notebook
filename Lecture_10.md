@@ -98,6 +98,8 @@ This is because `filter : ('a -> bool) -> 'a list -> 'a list`. Here, `filter (..
 
 Consider `filter (fn _ => true)`. This application has type `'a list -> 'a list`. It is extensionally equivalent to the identity function on lists.
 
+### The Map on List
+
 Consider another function definition.
 
 ```SML
@@ -127,5 +129,32 @@ convert_to_string [2, 4, ~1] ==> ["2", "4", "~1"]
  * e.g. foldl (op -) 0 [1, 2, 3, 4] = 2
  *      foldr (op -) 0 [1, 2, 3, 4] = ~2
  *)
+fun foldl (F : 'a * 'b -> 'b) (z : 'b) ([] : 'a list) : 'b = z
+  | foldl F z (x::xs) = foldl F (F (x, z)) xs
+
+fun foldr (F : 'a * 'b -> 'b) (z : 'b) ([] : 'a list) : 'b = z
+  | foldr F z (x::xs) = F (x, (foldr F z xs))
 ```
+
+### Some Other Interesting Functions
+
+```
+List.exists : ('a -> bool) -> 'a list -> bool // returns false on empty list
+List.forall : ('a -> bool) -> 'a list -> bool // returns true on empty list
+```
+
+### I Don't Know What This is Doing
+
+```
+    stock prices [20, 25, 24, 30, 20]
+==> [(20, 30), (25, 30), (24, 30), (30, 20)] by pair-up
+==> [10, 5, 6, ~10] by sell - buy
+==> 10 (max)
+```
+
+```SML
+fun best_gain (L : int list) : int = foldr Int.max -Inf (map gain (pair_up L))
+```
+
+__Side Note.__ `Int.minInt` in ML.
 
