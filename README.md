@@ -22,6 +22,7 @@ The table below is ordered chronologically.
 | :closed_book: Lecture 8 | [###](Lecture_8.md) | Merge Sort on :palm_tree: Trees & Analysis | 8 Feb 2018 |
 | :green_book:Midterm 1 Review | [###](Midterm_1_Review.md) | Asymptotic Analysis, :bouquet: Totality, Tail Recursion | 11 Feb 2018 |
 | :orange_book: Lecture 9 | [###](Lecture_9.md) | :paw_prints: Polymorphism, Option Type, Type Inference | 13 Feb 2018 |
+| :blue_book: Lecture 10 | [###](Lecture_10.md) | Curried Functions :fire: & Higher-Order Functions | 20 Feb 2018 |
 
 ## Attributions
 
