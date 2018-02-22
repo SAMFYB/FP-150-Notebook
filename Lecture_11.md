@@ -98,6 +98,8 @@ We want to pull out stuff we don't want to recompute.
 
 So consider currying!
 
+### Try Currying
+
 ```SML
 fun g (x : int) (y : int) : int =
   let
@@ -106,9 +108,41 @@ fun g (x : int) (y : int) : int =
     good_computation (z, y)
   end
 
-val g' = g 5  (* 10 months *)
-g' 2          (* 0.0000000000000000000000000000000000001 second *)
-g' 7          (* 0.0000000000000000000000000000000000001 second *)
-g' 8          (* 0.0000000000000000000000000000000000001 second *)
+val g' = g 5  (* RT: instantaneous *)
+g' 2          (* 10 months *)
+g' 7          (* 10 months *)
+g' 8          (* 10 months *)
 ```
+
+Consider what happens when we define function `g`.
+
+`fn x => fn y => let...end` is bound to `g`.
+
+`fn y => let...end` and `[5/x]` is bound to `g'`.
+
+__Note.__ The `horrible_computation` does __not__ happen when we define `g'`. Therefore, this currying does not help! So, somehow we want to do the actual computation. Here comes __staging__.
+
+### Try Staging
+
+```SML
+fun h (x : int) : int -> int =
+  let
+    val z : int = horrible_computation x
+  in
+    fn y => good_computation (z, y)
+  end
+
+val h' = h 5  (* 10 months *)
+h' 2          (* FAST *)
+h' 7          (* FAST *)
+h' 8          (* FAST *)
+```
+
+Consider what happens now.
+
+`fn x => let...in fn y =>...end` is bound to `h`.
+
+`fn y => z + y` and `[5/x]` AND `[.../z]` is bound to `h'`.
+
+Now this is what we want!
 
