@@ -1,5 +1,23 @@
 # Combinators & Staging
 
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+
+
+  - [Composition Function](#composition-function)
+- [What Is Function](#what-is-function)
+    - [Ideas](#ideas)
+  - [Functions in Spaces](#functions-in-spaces)
+  - [Valid Definitions Reflected in ML](#valid-definitions-reflected-in-ml)
+    - [Function `MIN`](#function-min)
+  - [What To Do with Functions (As Values!)](#what-to-do-with-functions-as-values)
+      - [Functions Are Values!](#functions-are-values)
+- [Staging](#staging)
+  - [Try Currying](#try-currying)
+  - [Try Staging](#try-staging)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 ### Composition Function
 
 ```SML
