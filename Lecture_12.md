@@ -55,3 +55,47 @@ Consider the `spec` of `csum`:
  *)
 ```
 
+> Side Note. `sum` could be written as high-order: `val sum = foldl (op +) 0`.
+
+## Some Even More Examples
+
+```sml
+datatype tree = Empty | Node of tree * int * tree
+fun inorder (Empty, acc) = acc
+  | inorder (Node(L, x, R), acc) = inorder (L, x::(inorder (R, acc)))
+
+(* treematch : tree -> int list -> bool
+ * ens : treematch T L = true if inorder (T, nil) = L | false otherwise *)
+fun treematch T L = (inorder (T, nil) = L)
+```
+
+__Problem.__ This implementation results in the fact that we have to traverse the entire tree no matter what.
+
+### Re-Implement using Continuation
+
+```sml
+(* [helper] prefix : tree -> int list -> (int list -> bool) -> bool
+ * req : k is total
+ * ens : prefix T L k = true if L = L1 @ L2 such that inorder (T, nil) = L1
+ *                                                    and k L2 = true
+ *                      and false otherwise *)
+fun prefix Empty L k = k L
+  | prefix Node(l,x,r) L k = prefix l L (fn L2 => case L2 of
+                                                    [] => false
+                                                  | (y::ys) => (x = y) andalso (prefix r ys k)
+```
+
+### Success & Failure Continuations
+
+```sml
+(* search : ('a -> bool) -> 'a tree -> ('a -> 'b)    success cont.
+ *                                  -> (unit -> 'b)  failure cont.
+ *                                  -> 'b
+ * req : p, sc, f, are total
+ * ens : search p T sc f = sc x if p x holds for some x in T | f () otherwise *)
+fun search _ Empty _ f = f ()
+  | search p (Node(l,x,r)) sc f =
+    if p x then sc x
+           else search p l sc (fn () => search p r sc f)
+```
+
