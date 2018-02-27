@@ -1,7 +1,18 @@
 # Lecture 12 Continuation Passing Style (CPS)
 
-<!-- START doctoc -->
-<!-- END doctoc -->
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+
+
+- [Definition of Continuation](#definition-of-continuation)
+- [Simple Examples](#simple-examples)
+- [Some More Examples](#some-more-examples)
+  - [Evaluation Trace of `csum`](#evaluation-trace-of-csum)
+- [Some Even More Examples](#some-even-more-examples)
+  - [Re-Implement using Continuation](#re-implement-using-continuation)
+  - [Success & Failure Continuations](#success--failure-continuations)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 ## Definition of Continuation
 
