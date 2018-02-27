@@ -1,5 +1,8 @@
 # Lecture 12 Continuation Passing Style (CPS)
 
+<!-- START doctoc -->
+<!-- END doctoc -->
+
 ## Definition of Continuation
 
 A __continuation__ is a function argument that encapsulates "what to do with the result".
@@ -42,6 +45,20 @@ Implementation using __continuation__.
 ```sml
 fun csum [] k = k 0
   | csum (x::xs) k = csum xs (fn s => k (x + s))
+```
+
+### Evaluation Trace of `csum`
+
+```
+    csum [2, 3] (fn s => s)
+  = csum [3] (fn s' => (fn s => s) (2 + s'))
+  = csum nil (fn s'' => (fn s' => (fn s => s) (2 + s')) (3 + s''))
+  = (fn s'' => (fn s' => (fn s => s) (2 + s')) (3 + s'')) 0
+  = (fn s' => (fn s => s) (2 + s')) (3 + 0)
+  = (fn s' => (fn s => s) (2 + s')) 3
+  = (fn s' => (fn s => s)) (2 + 3)
+  = (fn s => s) 5
+  = 5
 ```
 
 __Question.__ What is the connection between `sum` and `csum`?
