@@ -44,3 +44,14 @@ fun csum [] k = k 0
   | csum (x::xs) k = csum xs (fn s => k (x + s))
 ```
 
+__Question.__ What is the connection between `sum` and `csum`?
+
+Consider the `spec` of `csum`:
+
+```
+(* csum : int list -> (int -> 'a) -> 'a
+ * req : true
+ * ens : csum L k === k (sum L)
+ *)
+```
+
