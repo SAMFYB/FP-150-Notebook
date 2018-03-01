@@ -94,3 +94,33 @@ fun addqueen (i, n, Q) =
 fun queens n = addqueen (1, n, []) handle Conflict => raise Fail "No Solution."
 ```
 
+### Using Continuation
+
+```sml
+(* addqueen : int * int * (int * int) list -> ((int * int) list -> 'a) (* success *)
+ *                                         -> (unit -> 'a) (* failure *) -> 'a
+ * local helper try : int -> 'a
+ *)
+fun addqueen (i, n, Q) sc fc =
+  let
+    fun try j =
+      let
+        fun fc_new () = if j = n then fc ()
+                                 else try (j + 1)
+      in
+        if conflict (i, j) Q then fc_new ()
+                             else
+                               if i = n then sc (i, j) :: Q
+                                        else addqueen (i + 1, n, (i, j) :: Q) sc fc_new
+      end
+  in
+    try 1
+  end
+
+fun queens n = addqueen (1, n, []) SOME (fn () => NONE)
+```
+
+### Using Option
+
+__Idea.__ Whenever we raised Conflict, we instead return NONE. Wrap SOME on the value returned by `try`. Case on `try` result, if NONE, then try next row, but if hitting top, return NONE to higher level. If SOME result, then hand back result.
+
