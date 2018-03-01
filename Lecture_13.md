@@ -68,3 +68,29 @@ fun threat (x, y) (a, b) =
 fun conflict (x, y) = List.exists (threat (x, y))
 ```
 
+### Using Exception Handling
+
+```sml
+exception Conflict
+
+(* addqueen : int * int * (int * int) list -> (int * int) list
+ * [current col, board size, existing queens, all queens afterward]
+ * local helper try : int -> (int * int) list
+ * try j will try place i-th queen in row j or higher
+ * may raise conflict if not possible => backtrack
+ *)
+fun addqueen (i, n, Q) =
+  let
+    fun try j =
+      if conflict i j Q then raise Conflict
+                        else if i = n then (i, j) :: Q
+                                      else addqueen ((i + 1), n, (i, j) :: Q)
+      handle Conflict => if j = n then (* backtrack *) raise Conflict
+                                  else try (j + 1)
+  in
+    try 1
+  end
+
+fun queens n = addqueen (1, n, []) handle Conflict => raise Fail "No Solution."
+```
+
