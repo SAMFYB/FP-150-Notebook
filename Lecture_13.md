@@ -1,6 +1,6 @@
 # Lecture 13 Continuation Continued & Misc
 
-## Exception Handling
+## Exceptions
 
 We can define new exceptions like this:
 
@@ -22,3 +22,6 @@ fun divide (r1 : real, r2 : real) : real =
 
 > Note. `op /` has type `real * real -> real`.
 
+__Type-Check.__ If `e : exn` then `raise e : 'a`.
+
+###
