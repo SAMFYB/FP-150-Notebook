@@ -1,5 +1,21 @@
 # Lecture 13 Exception
 
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+
+
+- [Exceptions](#exceptions)
+  - [A Real Division using Exception](#a-real-division-using-exception)
+  - [A more complicated Exception](#a-more-complicated-exception)
+  - [Error Handling](#error-handling)
+- [The N-Queens Problem](#the-n-queens-problem)
+  - [Definitions](#definitions)
+  - [Using Exception Handling](#using-exception-handling)
+  - [Using Continuation](#using-continuation)
+  - [Using Option](#using-option)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 ## Exceptions
 
 We can define new exceptions like this:
