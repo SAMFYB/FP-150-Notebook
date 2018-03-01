@@ -1,4 +1,4 @@
-# Lecture 13 Continuation Continued & Misc
+# Lecture 13 Exception
 
 ## Exceptions
 
@@ -46,4 +46,25 @@ By this, we've done __error signaling__.
 Constraint: `e, e1, ..., en` must have the same type! (So we can think of the entirety as an expression.)
 
 No need to be exhaustive: If no pattern matches an exception raised by `e`, then the original exception percolates out.
+
+## The N-Queens Problem
+
+We'll implement the solution using three approaches: Exception, Continuation, Option.
+
+### Definitions
+
+A position on the board: `int * int`.
+
+```sml
+(* threat : int * int -> int * int -> bool
+ * ens : threat P Q decides whether queens P & Q threatens each other
+ *)
+fun threat (x, y) (a, b) =
+  (x = a) orelse (y = b) orelse (x - y = a - b) orelse (x + y = a + b)
+
+(* conflict : int * int -> (int * int) list -> bool
+ * conflict p Q decides whether any queen in Q threatens p
+ *)
+fun conflict (x, y) = List.exists (threat (x, y))
+```
 
