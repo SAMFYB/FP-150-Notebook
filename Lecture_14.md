@@ -36,4 +36,6 @@
 
 - <img src="https://rawgit.com/SAMFYB/FP-150-Notebook/master/svgs/de6bd4d6a30988d6261dddb7230350e2.svg?invert_in_darkmode" align=middle width=97.08534pt height=24.6576pt/>
 - <img src="https://rawgit.com/SAMFYB/FP-150-Notebook/master/svgs/d248936ae552d4651a8432f49d666060.svg?invert_in_darkmode" align=middle width=93.81669pt height=24.6576pt/>
+- $L((a+1)(a+1)) = \{\epsilon, a, aa\}$
+- $L(1 + a + aa) = \{\epsilon, a, aa\}$
 
