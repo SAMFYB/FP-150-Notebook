@@ -25,15 +25,15 @@
 
 | Regular Expression | Language |
 | ------------------ | -------- |
-| $a$ | $L(a) = \{a\}$ |
-| $0$ | $L(0) = \{\}$ |
-| $1$ | $L(1) = \{\epsilon\}$ |
-| $r_1r_2$ | $\{s_1s_2 : s_1 \in L(r_1), s_2 \in L(r_2)\}$ |
-| $r_1+r_2$ | $\{s : s \in L(r_1) or s \in L(r_2)\}$ |
-| $r^*$ | $\{s_1s_2...s_n : n \in \mathbb{N}, n \geq 0, s_i \in L(r)\}$ |
+| <img src="https://rawgit.com/SAMFYB/FP-150-Notebook/master/svgs/44bc9d542a92714cac84e01cbbb7fd61.svg?invert_in_darkmode" align=middle width=8.68923pt height=14.15535pt/> | <img src="https://rawgit.com/SAMFYB/FP-150-Notebook/master/svgs/854d813ebdae89562ee01d30b6655ae6.svg?invert_in_darkmode" align=middle width=79.707045pt height=24.6576pt/> |
+| <img src="https://rawgit.com/SAMFYB/FP-150-Notebook/master/svgs/29632a9bf827ce0200454dd32fc3be82.svg?invert_in_darkmode" align=middle width=8.219277pt height=21.18732pt/> | <img src="https://rawgit.com/SAMFYB/FP-150-Notebook/master/svgs/98fc044df1426d8e13315667a5881624.svg?invert_in_darkmode" align=middle width=70.54806pt height=24.6576pt/> |
+| <img src="https://rawgit.com/SAMFYB/FP-150-Notebook/master/svgs/034d0a6be0424bffe9a6e7ac9236c0f5.svg?invert_in_darkmode" align=middle width=8.219277pt height=21.18732pt/> | <img src="https://rawgit.com/SAMFYB/FP-150-Notebook/master/svgs/ffa1dcb3d5e8791326183c21e8e3898d.svg?invert_in_darkmode" align=middle width=77.22033pt height=24.6576pt/> |
+| <img src="https://rawgit.com/SAMFYB/FP-150-Notebook/master/svgs/1cfcd7b08c7374283591e89aa1b586a4.svg?invert_in_darkmode" align=middle width=28.759665pt height=14.15535pt/> | <img src="https://rawgit.com/SAMFYB/FP-150-Notebook/master/svgs/03f0a17af1386348f2c303f3d4d114b7.svg?invert_in_darkmode" align=middle width=215.471355pt height=24.6576pt/> |
+| <img src="https://rawgit.com/SAMFYB/FP-150-Notebook/master/svgs/4136997236d43514ad83bdc6fb7c69fb.svg?invert_in_darkmode" align=middle width=48.85089pt height=19.17828pt/> | <img src="https://rawgit.com/SAMFYB/FP-150-Notebook/master/svgs/fc5f9b5bae949ad55bc08fda8ecc233d.svg?invert_in_darkmode" align=middle width=186.804255pt height=24.6576pt/> |
+| <img src="https://rawgit.com/SAMFYB/FP-150-Notebook/master/svgs/1dda62b9f52197f613086bb104247584.svg?invert_in_darkmode" align=middle width=14.608275pt height=22.63866pt/> | <img src="https://rawgit.com/SAMFYB/FP-150-Notebook/master/svgs/91ac033aec140743a973598439d09239.svg?invert_in_darkmode" align=middle width=252.210255pt height=24.6576pt/> |
 
 ### Some Examples
 
-- $L(aa) = \{aa\}$
-- $L(ab) = \{ab\}$
+- <img src="https://rawgit.com/SAMFYB/FP-150-Notebook/master/svgs/de6bd4d6a30988d6261dddb7230350e2.svg?invert_in_darkmode" align=middle width=97.08534pt height=24.6576pt/>
+- <img src="https://rawgit.com/SAMFYB/FP-150-Notebook/master/svgs/d248936ae552d4651a8432f49d666060.svg?invert_in_darkmode" align=middle width=93.81669pt height=24.6576pt/>
 
