@@ -38,5 +38,5 @@
 - <img src="https://rawgit.com/SAMFYB/FP-150-Notebook/master/svgs/d248936ae552d4651a8432f49d666060.svg?invert_in_darkmode" align=middle width=93.81669pt height=24.6576pt/>
 - <img src="https://rawgit.com/SAMFYB/FP-150-Notebook/master/svgs/5f911e62f54114ef9d74e4d95d8ff4e2.svg?invert_in_darkmode" align=middle width=209.250855pt height=24.6576pt/>
 - <img src="https://rawgit.com/SAMFYB/FP-150-Notebook/master/svgs/91ecc8f33b8e22025a337b8ffd22ab20.svg?invert_in_darkmode" align=middle width=184.149405pt height=24.6576pt/>
-- $L((a+b)^*)$ is the set of all strings formed from the alphabet
+- <img src="https://rawgit.com/SAMFYB/FP-150-Notebook/master/svgs/48296ba258dfac2dfbe77b68ea7cf72f.svg?invert_in_darkmode" align=middle width=80.1504pt height=24.6576pt/> is the set of all strings formed from the alphabet
 
