@@ -40,7 +40,7 @@
 - <img src="https://rawgit.com/SAMFYB/FP-150-Notebook/master/svgs/91ecc8f33b8e22025a337b8ffd22ab20.svg?invert_in_darkmode" align=middle width=184.149405pt height=24.6576pt/>
 - <img src="https://rawgit.com/SAMFYB/FP-150-Notebook/master/svgs/48296ba258dfac2dfbe77b68ea7cf72f.svg?invert_in_darkmode" align=middle width=80.1504pt height=24.6576pt/> is the set of all strings formed from the alphabet
 
-__Theorem.__ $L$ is regular iff $L^C$ is regular.
+__Theorem.__ <img src="https://rawgit.com/SAMFYB/FP-150-Notebook/master/svgs/ddcb483302ed36a59286424aa5e0be17.svg?invert_in_darkmode" align=middle width=11.18733pt height=22.46574pt/> is regular iff <img src="https://rawgit.com/SAMFYB/FP-150-Notebook/master/svgs/c7f7272d102de6cd0afef7ad1317fdff.svg?invert_in_darkmode" align=middle width=21.421785pt height=27.65697pt/> is regular.
 
-- $L((a+1)(b+ba)^*)$ is the compliment of the last language above.
+- <img src="https://rawgit.com/SAMFYB/FP-150-Notebook/master/svgs/acb989284deb3c822c0e503461de7a8e.svg?invert_in_darkmode" align=middle width=136.99026pt height=24.6576pt/> is the compliment of the last language above.
 
