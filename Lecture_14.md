@@ -40,3 +40,7 @@
 - <img src="https://rawgit.com/SAMFYB/FP-150-Notebook/master/svgs/91ecc8f33b8e22025a337b8ffd22ab20.svg?invert_in_darkmode" align=middle width=184.149405pt height=24.6576pt/>
 - <img src="https://rawgit.com/SAMFYB/FP-150-Notebook/master/svgs/48296ba258dfac2dfbe77b68ea7cf72f.svg?invert_in_darkmode" align=middle width=80.1504pt height=24.6576pt/> is the set of all strings formed from the alphabet
 
+__Theorem.__ $L$ is regular iff $L^C$ is regular.
+
+- $L((a+1)(b+ba)^*)$ is the compliment of the last language above.
+
