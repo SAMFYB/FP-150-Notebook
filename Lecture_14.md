@@ -45,3 +45,40 @@ __Theorem.__ <img src="https://rawgit.com/SAMFYB/FP-150-Notebook/master/svgs/ddc
 
 - <img src="https://rawgit.com/SAMFYB/FP-150-Notebook/master/svgs/acb989284deb3c822c0e503461de7a8e.svg?invert_in_darkmode" align=middle width=136.99026pt height=24.6576pt/> is the compliment of the last language above.
 
+## Time to Write Some Code
+
+```sml
+datatype regexp = Char of char
+                | Zero
+                | One
+                | Times of regexp * regexp
+                | Plus of regexp * regexp
+                | Star of regexp
+
+(* accept : regexp -> string -> bool
+ * req : true
+ * ens : accept r s => true if s in L(r)
+ *                     false otherwise
+ *
+ * (helper) match : regexp -> char list -> (char list -> bool) -> bool
+ * req : k is total
+ * ens : match r cs k => true if cs = p @ s s.t. p in L(r) & k s = true
+ *                       false otherwise
+ *)
+fun accept r s = match r (String.explode s) List.null
+fun match (Char a) cs k = case cs of
+                            [] => false
+                          | (c::cs') => (a = c) andalso (k cs')
+  | match Zero cs k = false
+  | match One cs k = k cs
+  | match (Times (r1, r2)) cs k = match r1 cs (fn cs' => match r2 cs' k)
+  | match (Plus (r1, r2)) cs k = (match r1 cs k) orelse (match r2 cs k)
+  | match (Star r) cs k = (k cs) orelse (match r cs (fn cs' => match (Star k) cs' k))
+```
+
+__Issue.__ The last clause may not necessarily terminate considering `Star 1`.
+
+Fixes
+- Require a stronger spec
+- Instantly check `cs' <> cs`
+
