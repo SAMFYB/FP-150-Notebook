@@ -32,3 +32,13 @@ fun curry x y z = fn x => (fn y => (fn z => x + y + z))
 
 __Note:__ Types are right associative.
 
+## Partial Application
+
+```sml
+foldr : ('a * 'b -> 'b) -> 'b -> 'a list -> 'b
+op ^ : string * string -> string
+foldr (op ^) : string -> string list -> string
+foldr (op ^) "Shashank" : string list -> string
+foldr (op ^) "Shashank" [] : string
+```
+
