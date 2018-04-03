@@ -112,7 +112,7 @@ end
 ### Analysis of the Implementation above with Cost Graphs
 
 - `empty () = <>`: constant work & span
-- `tabulate f n =` $<f(x_0),...,f(x_{n-1})>$
+- `tabulate f n =` $<f(0),...,f(n-1)>$
 
 __Cost Graph__ for `tabulate`:
 
@@ -125,4 +125,9 @@ __Cost Graph__ for `tabulate`:
 Suppose `f` has constant work & span, then $W=O(n)$ and $S=O(1)$.
 
 However, `tabulate` for `List` has work and span of both $O(n)$ because `List` has no random access.
+
+- `nth <x0,...,xn-1> i = xi if 0 <= i <= n-1 | raise Range otherwise`
+  - Cost Graph: `o-o`
+  - $W = S = O(1)$
+  - For `List`: $W = S = O(n)$
 
