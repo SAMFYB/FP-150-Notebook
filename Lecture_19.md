@@ -88,6 +88,7 @@ sig
 
   val empty : unit -> 'a seq (* notation: <> *)
   (* We need this so that in the same code we can have 'a seq, 'b seq, so on at the same time. *)
+  (* In addition, the initialization function allows us to do stuff behind the scene. *)
 
   (* Side Note
    * We cannot pattern match directly on sequences.
@@ -107,4 +108,21 @@ sig
   (* etc. *)
 end
 ```
+
+### Analysis of the Implementation above with Cost Graphs
+
+- `empty () = <>`: constant work & span
+- `tabulate f n =` $<f(x_0),...,f(x_{n-1})>$
+
+__Cost Graph__ for `tabulate`:
+
+```
+                [SOURCE]
+   f(0) f(1) ... ... ... f(n-1)
+                 [SINK]
+```
+
+Suppose `f` has constant work & span, then $W=O(n)$ and $S=O(1)$.
+
+However, `tabulate` for `List` has work and span of both $O(n)$ because `List` has no random access.
 
