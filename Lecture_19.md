@@ -139,3 +139,20 @@ However, `tabulate` for `List` has work and span of both <img src="https://rawgi
   - Think of `g` as an `infix` operator
 - `reduce g z <x0,...,xn-1> = x0 * x1 *...* xn-1 * z` where `*` is the infix operator defined by `g`
 
+__Side Note:__ Sometimes (e.g. in 210) we assume `z` is an identity for `g`, which means it does not matter where to put `z` in the sequence. This is powerful for writing efficient parallel code.
+
+__Cost Graph__ for `reduce`:
+
+```
+                              [SOURCE]
+      _ _   _ _   _ _   _ _   ...   ...   _ _
+       V     V     V     V       ...       V
+       _     _     _     _       ...       _
+          V           V                 V
+                V             ...
+                        [SINK]
+```
+
+$$ W = O(n) $$
+$$ S = O(log(n)) $$
+
