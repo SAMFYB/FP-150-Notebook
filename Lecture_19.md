@@ -164,3 +164,16 @@ __Cost Graph__ for `reduce`:
 - `filter p <x0,...,xn-1> = <all xi s.t. p xi = true`
 - <img src="https://rawgit.com/SAMFYB/FP-150-Notebook/master/svgs/f4a2a08c15af030f2ba0eaebaeb7a879.svg?invert_in_darkmode" align=middle width=75.37365pt height=24.6576pt/> and <img src="https://rawgit.com/SAMFYB/FP-150-Notebook/master/svgs/b049cd3ebde6a8c2ebde2bea87c8e562.svg?invert_in_darkmode" align=middle width=103.005045pt height=24.6576pt/> because there is some additional work (for span)
 
+---
+
+```sml
+structure Seq :> SEQ = struct (* etc. *) end
+
+fun sum (s : int Seq.seq) : int = Seq.reduce (op +) 0 s
+
+type row = int Seq.seq
+type room = row Seq.seq (* 2D sequence *)
+
+fun count (class : room) : int = sum (Seq.map sum class)
+```
+
