@@ -112,7 +112,7 @@ end
 ### Analysis of the Implementation above with Cost Graphs
 
 - `empty () = <>`: constant work & span
-- `tabulate f n =` $<f(0),...,f(n-1)>$
+- `tabulate f n =` <img src="https://rawgit.com/SAMFYB/FP-150-Notebook/master/svgs/59fd60444d3014622039c292bc4a180f.svg?invert_in_darkmode" align=middle width=154.615725pt height=24.6576pt/>
 
 __Cost Graph__ for `tabulate`:
 
@@ -122,12 +122,12 @@ __Cost Graph__ for `tabulate`:
                  [SINK]
 ```
 
-Suppose `f` has constant work & span, then $W=O(n)$ and $S=O(1)$.
+Suppose `f` has constant work & span, then <img src="https://rawgit.com/SAMFYB/FP-150-Notebook/master/svgs/f4a2a08c15af030f2ba0eaebaeb7a879.svg?invert_in_darkmode" align=middle width=75.37365pt height=24.6576pt/> and <img src="https://rawgit.com/SAMFYB/FP-150-Notebook/master/svgs/cf524806204b9b8fb6a5a94f0edb2fa4.svg?invert_in_darkmode" align=middle width=66.94512pt height=24.6576pt/>.
 
-However, `tabulate` for `List` has work and span of both $O(n)$ because `List` has no random access.
+However, `tabulate` for `List` has work and span of both <img src="https://rawgit.com/SAMFYB/FP-150-Notebook/master/svgs/1f08ccc9cd7309ba1e756c3d9345ad9f.svg?invert_in_darkmode" align=middle width=35.647755pt height=24.6576pt/> because `List` has no random access.
 
 - `nth <x0,...,xn-1> i = xi if 0 <= i <= n-1 | raise Range otherwise`
   - Cost Graph: `o-o`
-  - $W = S = O(1)$
-  - For `List`: $W = S = O(n)$
+  - <img src="https://rawgit.com/SAMFYB/FP-150-Notebook/master/svgs/d73e2d0cb090623c71aa8260406fa70d.svg?invert_in_darkmode" align=middle width=106.671015pt height=24.6576pt/>
+  - For `List`: <img src="https://rawgit.com/SAMFYB/FP-150-Notebook/master/svgs/306dcddce5e721bcd99910ad3179124f.svg?invert_in_darkmode" align=middle width=108.318705pt height=24.6576pt/>
 
