@@ -156,3 +156,11 @@ __Cost Graph__ for `reduce`:
 <p align="center"><img src="https://rawgit.com/SAMFYB/FP-150-Notebook/master/svgs/50705407a2038b6e30a9da27d4cbd880.svg?invert_in_darkmode" align=middle width=75.37365pt height=16.438356pt/></p>
 <p align="center"><img src="https://rawgit.com/SAMFYB/FP-150-Notebook/master/svgs/b8fb0111e9245449f511e492e453171b.svg?invert_in_darkmode" align=middle width=103.00488pt height=16.438356pt/></p>
 
+- `mapreduce f z g <x0,...,xn-1> = f(x0) * f(x1) *...* f(xn-1) * z`
+- Work & Span is same as `reduce`
+
+---
+
+- `filter p <x0,...,xn-1> = <all xi s.t. p xi = true`
+- $W=O(n)$ and $S=O(log(n))$ because there is some additional work (for span)
+
