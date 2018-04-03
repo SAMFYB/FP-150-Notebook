@@ -189,5 +189,5 @@ For `count'`
                     [SINK]
 ```
 
-$$ S = O(log(n) + log(m)) $$
+<p align="center"><img src="https://rawgit.com/SAMFYB/FP-150-Notebook/master/svgs/12de7995e6217c8970ca515226c15243.svg?invert_in_darkmode" align=middle width=171.94155pt height=16.438356pt/></p>
 
