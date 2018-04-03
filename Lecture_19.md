@@ -133,3 +133,9 @@ However, `tabulate` for `List` has work and span of both <img src="https://rawgi
 
 - `map f <x0,...,xn-1>`: same __cost graph__ as `tabulate`
 
+---
+
+- Assuming `g` is __associative__
+  - Think of `g` as an `infix` operator
+- `reduce g z <x0,...,xn-1> = x0 * x1 *...* xn-1 * z` where `*` is the infix operator defined by `g`
+
