@@ -153,6 +153,6 @@ __Cost Graph__ for `reduce`:
                         [SINK]
 ```
 
-$$ W = O(n) $$
-$$ S = O(log(n)) $$
+<p align="center"><img src="https://rawgit.com/SAMFYB/FP-150-Notebook/master/svgs/50705407a2038b6e30a9da27d4cbd880.svg?invert_in_darkmode" align=middle width=75.37365pt height=16.438356pt/></p>
+<p align="center"><img src="https://rawgit.com/SAMFYB/FP-150-Notebook/master/svgs/b8fb0111e9245449f511e492e453171b.svg?invert_in_darkmode" align=middle width=103.00488pt height=16.438356pt/></p>
 
