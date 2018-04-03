@@ -131,3 +131,5 @@ However, `tabulate` for `List` has work and span of both <img src="https://rawgi
   - <img src="https://rawgit.com/SAMFYB/FP-150-Notebook/master/svgs/d73e2d0cb090623c71aa8260406fa70d.svg?invert_in_darkmode" align=middle width=106.671015pt height=24.6576pt/>
   - For `List`: <img src="https://rawgit.com/SAMFYB/FP-150-Notebook/master/svgs/306dcddce5e721bcd99910ad3179124f.svg?invert_in_darkmode" align=middle width=108.318705pt height=24.6576pt/>
 
+- `map f <x0,...,xn-1>`: same __cost graph__ as `tabulate`
+
