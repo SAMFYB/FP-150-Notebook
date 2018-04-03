@@ -175,5 +175,7 @@ type row = int Seq.seq
 type room = row Seq.seq (* 2D sequence *)
 
 fun count (class : room) : int = sum (Seq.map sum class)
+
+fun count' (class : room) : int = Seq.mapreduce sum 0 (op +) class (* alternative implementation *)
 ```
 
