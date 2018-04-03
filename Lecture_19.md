@@ -179,3 +179,15 @@ fun count (class : room) : int = sum (Seq.map sum class)
 fun count' (class : room) : int = Seq.mapreduce sum 0 (op +) class (* alternative implementation *)
 ```
 
+For `count'`
+
+```
+                          [SOURCE]
+      [sum R1]   [sum R2] ... ... ...  [sum Rn]
+               V             V  ...
+                    ...
+                    [SINK]
+```
+
+$$ S = O(log(n) + log(m)) $$
+
