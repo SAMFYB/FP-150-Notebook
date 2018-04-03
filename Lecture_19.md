@@ -41,7 +41,7 @@ __Span__ is Length of the Longest Path (Count Edges)
 
 For example, in the above `(1 + 2) + 3` instance, `W = 7` and `S = 4`.
 
-__Brent's Theorem__: Time to perform a computation is $O(max(\frac{W}{p},S))$ where $p$ is the number of processors.
+__Brent's Theorem__: Time to perform a computation is <img src="https://rawgit.com/SAMFYB/FP-150-Notebook/master/svgs/8439b70bf473858853994d1a6012877b.svg?invert_in_darkmode" align=middle width=107.49453pt height=28.67073pt/> where <img src="https://rawgit.com/SAMFYB/FP-150-Notebook/master/svgs/2ec6e630f199f589a2402fdf3e0289d5.svg?invert_in_darkmode" align=middle width=8.270625pt height=14.15535pt/> is the number of processors.
 
 __Example:__
 
@@ -66,7 +66,7 @@ Time / Processors (#1, #2)
   6  |  F
 ```
 
-$$ max (\frac{W}{p}, S) = max (\frac{10}{2}, 4) = 5 $$
+<p align="center"><img src="https://rawgit.com/SAMFYB/FP-150-Notebook/master/svgs/d9296a5db2a038abb470f5edc833087c.svg?invert_in_darkmode" align=middle width=218.6547pt height=36.82569pt/></p>
 
 __Note:__ The particular structure of this graph does not allow the actual optimal to be achieved.
 
@@ -77,7 +77,7 @@ __Question:__ What is the cost of finding the length of a list? How can we do be
 - Sequences are like `list` as we can walk through it sequentially.
 - Sequences are like `tree` as it has `log` properties.
 
-__Notation:__ $<x_0,...,x_{n-1}>$
+__Notation:__ <img src="https://rawgit.com/SAMFYB/FP-150-Notebook/master/svgs/ac8ee1bcaf9adabf24373dc81cc947c9.svg?invert_in_darkmode" align=middle width=114.95253pt height=17.72397pt/>
 
 ### Implementation
 
