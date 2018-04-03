@@ -162,5 +162,5 @@ __Cost Graph__ for `reduce`:
 ---
 
 - `filter p <x0,...,xn-1> = <all xi s.t. p xi = true`
-- $W=O(n)$ and $S=O(log(n))$ because there is some additional work (for span)
+- <img src="https://rawgit.com/SAMFYB/FP-150-Notebook/master/svgs/f4a2a08c15af030f2ba0eaebaeb7a879.svg?invert_in_darkmode" align=middle width=75.37365pt height=24.6576pt/> and <img src="https://rawgit.com/SAMFYB/FP-150-Notebook/master/svgs/b049cd3ebde6a8c2ebde2bea87c8e562.svg?invert_in_darkmode" align=middle width=103.005045pt height=24.6576pt/> because there is some additional work (for span)
 
