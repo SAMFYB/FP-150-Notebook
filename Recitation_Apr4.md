@@ -1,5 +1,8 @@
 # Recitation April 4 - Sequences
 
+<!-- START doctoc -->
+<!-- END doctoc -->
+
 ## List v. Sequences (Pros & Cons)
 
 __Pros__:
@@ -47,4 +50,15 @@ fun elimRows (L : int Seq.seq Seq.seq) (k : int) =
 
 (* elimRows removes rows where there is NO element greater than k *)
 ```
+
+## Work & Span Analysis of Sequence Library
+
+| Function | Work | Span |
+| -------- | ---- | ---- |
+| tabulate | $O(n)$ | $O(1)$ |
+| map      | $O(n)$ | $O(1)$ |
+| filter   | $O(n)$ | $O(log(n))$ |
+| nth      | $O(1)$ | $O(1)$ |
+| reduce   | $O(n)$ | $O(log(n))$ |
+| length   | $O(1)$ | $O(1)$ |
 
