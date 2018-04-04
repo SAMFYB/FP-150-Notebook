@@ -1,7 +1,17 @@
 # Recitation April 4 - Sequences
 
-<!-- START doctoc -->
-<!-- END doctoc -->
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+
+
+- [List v. Sequences (Pros & Cons)](#list-v-sequences-pros--cons)
+- [Sequence Library](#sequence-library)
+  - [Tabulate](#tabulate)
+  - [Reverse Sequence](#reverse-sequence)
+  - [Eliminate Rows of Sequence of Sequences](#eliminate-rows-of-sequence-of-sequences)
+- [Work & Span Analysis of Sequence Library](#work--span-analysis-of-sequence-library)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 ## List v. Sequences (Pros & Cons)
 
