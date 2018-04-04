@@ -23,6 +23,13 @@ The table below is ordered chronologically.
 | :green_book:Midterm 1 Review | [###](Midterm_1_Review.md) | Asymptotic Analysis, :bouquet: Totality, Tail Recursion | 11 Feb 2018 |
 | :orange_book: Lecture 9 | [###](Lecture_9.md) | :paw_prints: Polymorphism, Option Type, Type Inference | 13 Feb 2018 |
 | :blue_book: Lecture 10 | [###](Lecture_10.md) | Curried Functions :fire: & Higher-Order Functions | 20 Feb 2018 |
+| Lecture 11 | [###](Lecture_11.md) | Combinators, Staging, Staging vs Currying | 22 Feb 2018 |
+| Lecture 12 | [###](Lecture_12.md) | Continuation Passing Style (CPS) | 27 Feb 2018 |
+| Lecture 13 | [###](Lecture_13.md) | Exceptions, N-Queen Problem | 1 Mar 2018 |
+| Lecture 14 | [###](Lecture_14.md) | Regular Expression | 6 Mar 2018 |
+| Recitation Mar 28 | [###](Recitation_Mar28.md) | Midterm 2 Review | 28 Mar 2018 |
+| Lecture 19 | [###](Lecture_19.md) | Sequences, Cost Graphs | 3 Apr 2018 |
+| Recitation Apr 4 | [###](Recitation_Apr4.md) | Sequences | 4 Apr 2018 |
 
 ## Attributions
 
