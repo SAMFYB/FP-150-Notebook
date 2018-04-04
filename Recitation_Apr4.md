@@ -33,3 +33,18 @@ fun rev S =
   Seq.tabulate (fn i => Seq.nth S (Seq.length - i - 1)) (Seq.length S)
 ```
 
+### Eliminate Rows of Sequence of Sequences
+
+```sml
+fun elimRows (L : int Seq.seq Seq.seq) (k : int) =
+  let
+    val Smax = Seq.map (fn S => (Seq.reduce Int.max 0 S, S)) L
+    val filtered = Seq.filter (fn (m, R) => m > k) Smax
+    val remove = Seq.map (fn (m, R) => R) filtered
+  in
+    remove
+  end
+
+(* elimRows removes rows where there is NO element greater than k *)
+```
+
