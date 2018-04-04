@@ -55,10 +55,10 @@ fun elimRows (L : int Seq.seq Seq.seq) (k : int) =
 
 | Function | Work | Span |
 | -------- | ---- | ---- |
-| tabulate | $O(n)$ | $O(1)$ |
-| map      | $O(n)$ | $O(1)$ |
-| filter   | $O(n)$ | $O(log(n))$ |
-| nth      | $O(1)$ | $O(1)$ |
-| reduce   | $O(n)$ | $O(log(n))$ |
-| length   | $O(1)$ | $O(1)$ |
+| tabulate | <img src="https://rawgit.com/SAMFYB/FP-150-Notebook/master/svgs/1f08ccc9cd7309ba1e756c3d9345ad9f.svg?invert_in_darkmode" align=middle width=35.647755pt height=24.6576pt/> | <img src="https://rawgit.com/SAMFYB/FP-150-Notebook/master/svgs/1e2f931ee6c0b8e7a51a7b0d123d514f.svg?invert_in_darkmode" align=middle width=34.000065pt height=24.6576pt/> |
+| map      | <img src="https://rawgit.com/SAMFYB/FP-150-Notebook/master/svgs/1f08ccc9cd7309ba1e756c3d9345ad9f.svg?invert_in_darkmode" align=middle width=35.647755pt height=24.6576pt/> | <img src="https://rawgit.com/SAMFYB/FP-150-Notebook/master/svgs/1e2f931ee6c0b8e7a51a7b0d123d514f.svg?invert_in_darkmode" align=middle width=34.000065pt height=24.6576pt/> |
+| filter   | <img src="https://rawgit.com/SAMFYB/FP-150-Notebook/master/svgs/1f08ccc9cd7309ba1e756c3d9345ad9f.svg?invert_in_darkmode" align=middle width=35.647755pt height=24.6576pt/> | <img src="https://rawgit.com/SAMFYB/FP-150-Notebook/master/svgs/85166763cc148ef36c2009f7eee4c50a.svg?invert_in_darkmode" align=middle width=70.05999pt height=24.6576pt/> |
+| nth      | <img src="https://rawgit.com/SAMFYB/FP-150-Notebook/master/svgs/1e2f931ee6c0b8e7a51a7b0d123d514f.svg?invert_in_darkmode" align=middle width=34.000065pt height=24.6576pt/> | <img src="https://rawgit.com/SAMFYB/FP-150-Notebook/master/svgs/1e2f931ee6c0b8e7a51a7b0d123d514f.svg?invert_in_darkmode" align=middle width=34.000065pt height=24.6576pt/> |
+| reduce   | <img src="https://rawgit.com/SAMFYB/FP-150-Notebook/master/svgs/1f08ccc9cd7309ba1e756c3d9345ad9f.svg?invert_in_darkmode" align=middle width=35.647755pt height=24.6576pt/> | <img src="https://rawgit.com/SAMFYB/FP-150-Notebook/master/svgs/85166763cc148ef36c2009f7eee4c50a.svg?invert_in_darkmode" align=middle width=70.05999pt height=24.6576pt/> |
+| length   | <img src="https://rawgit.com/SAMFYB/FP-150-Notebook/master/svgs/1e2f931ee6c0b8e7a51a7b0d123d514f.svg?invert_in_darkmode" align=middle width=34.000065pt height=24.6576pt/> | <img src="https://rawgit.com/SAMFYB/FP-150-Notebook/master/svgs/1e2f931ee6c0b8e7a51a7b0d123d514f.svg?invert_in_darkmode" align=middle width=34.000065pt height=24.6576pt/> |
 
