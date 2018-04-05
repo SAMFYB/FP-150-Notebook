@@ -14,3 +14,23 @@
 - __Edges__ represent possible moves
 - A given __level__ corresponds to a given player, alternating turns
 
+## Estimators
+
+In practice, trees are too large to visit all leaves.
+
+Instead,
+- expand tree to __some depth__
+- use __game-specific estimator__ to assign values (not just `1` or `~1`) at bottom-most nodes explored
+
+Then, backchain minimax as before.
+
+Repeat this after each actual move.
+
+__Issue:__ Horizontal Effect
+
+## Modular Framework
+
+- Game: `GAME`
+- Player: `PLAYER`
+- Referee: `GO`
+
