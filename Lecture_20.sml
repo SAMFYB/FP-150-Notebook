@@ -1,3 +1,4 @@
+(* The GAME signature works for all this kind of games. *)
 signature GAME =
 sig
   datatype player = Minnie | Maxie
@@ -24,5 +25,14 @@ sig
   val player : state -> player
 end
 
-structure Game :> GAME =
+(* Implementation of the game Nim *)
+structure Nim : GAME = (* We could use opaque ascribtion. *)
 struct
+  (* datatype's exactly same as signature *)
+  datatype player = Minnie | Maxie
+  datatype outcome = Winner of player | Draw
+  datatype status = Over of outcome | In_play
+
+  datatype state = State of int * player
+  (* Since we're using transparent ascribtion, this makes sure the user does not arbitrarily mutate the values. *)
+  datatype move = Move of int
