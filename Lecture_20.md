@@ -34,3 +34,7 @@ __Issue:__ Horizontal Effect
 - Player: `PLAYER`
 - Referee: `GO`
 
+## Implementation
+
+See [code](Lecture_20.sml).
+
