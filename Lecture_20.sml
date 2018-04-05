@@ -62,3 +62,18 @@ struct
                    else Definitely (Winner P)
 end
 
+(* Now we have a game, but we also need players. *)
+signature PLAYER =
+sig
+  structure Game : GAME
+  val next_move Game.state -> Game.move
+end
+
+(* To create a player for a specific game, we need a functor! *)
+functor HumanPlayer (G : GAME) : PLAYER =
+struct
+  structure Game = G
+  fun next_move (* Ask the user for a move, check it's illegal, return it. *) =
+    raise Fail "Unimplemented"
+end
+
