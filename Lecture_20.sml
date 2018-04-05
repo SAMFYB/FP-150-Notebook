@@ -36,3 +36,29 @@ struct
   datatype state = State of int * player
   (* Since we're using transparent ascribtion, this makes sure the user does not arbitrarily mutate the values. *)
   datatype move = Move of int
+
+  (* same as signature *)
+  datatype (* Estimator *) est = Definitely of outcome
+                               | Guess of int (* How strong is the guess *)
+
+  fun player (State (_, P)) = P
+  fun status (State (0, P)) = Over (Winner P)
+    | status _ = In_play
+
+  val start = State (400, Maxie)
+
+  (* A useful helper: flip players *)
+  fun flip Maxie = Minnie
+    | flip Minnie = Maxie
+
+  fun make_move (State (n, P), Move k) =
+    if (n > k orelse n = k) then State (n - k, flip P)
+    else raise Fail "Illegal Move"
+
+  fun moves (State (n, _)) = Seq.tabulate (fn x => Move (x + 1)) (Int.min (n, 3))
+
+  fun estimator (State (n, P)) =
+    if n mod 4 = 1 then Definitely (Winner (flip P))
+                   else Definitely (Winner P)
+end
+
