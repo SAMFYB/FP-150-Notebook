@@ -1,5 +1,17 @@
 # Lecture 20 - Game Theory
 
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+
+
+- [Modular Framework for the following kinds of Games](#modular-framework-for-the-following-kinds-of-games)
+- [Game Trees](#game-trees)
+- [Estimators](#estimators)
+- [Modular Framework](#modular-framework)
+- [Implementation](#implementation)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 ## Modular Framework for the following kinds of Games
 
 - 2-player (alternate turns)
