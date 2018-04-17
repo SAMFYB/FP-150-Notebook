@@ -31,6 +31,7 @@ The table below is ordered chronologically.
 | Lecture 19 | [###](Lecture_19.md) | Sequences, Cost Graphs | 3 Apr 2018 |
 | Recitation Apr 4 | [###](Recitation_Apr4.md) | Sequences | 4 Apr 2018 |
 | Lecture 20 | [###](Lecture_20.md) | Game Theory, Game Model, Minimax Tree | 5 Apr 2018 |
+| Lecture 23 | [###](Lecture_23.md) | Imperative Programming | 17 Apr 2018 |
 
 ## Attributions
 
