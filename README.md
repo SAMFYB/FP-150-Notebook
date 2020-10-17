@@ -2,11 +2,7 @@
 
 This is my notebook for Carnegie Mellon 15-150 Principles of Functional Programming. The notes may be incoherent and incomplete. Yet, I decide to make this public so people might find it useful.
 
-There are more actual source codes in my repo [SML Collection](https://github.com/SAMFYB/SML-collection).
-
 > PDF version of the notes are in the `pdfs` folder.
-
-> Note: If you're viewing this as a webpage, I recommend [View on GitHub](https://github.com/SAMFYB/FP-150-Notebook) or get the PDF versions on GitHub. This is because the SVG images in the notes are NOT rendered correctly on webpages.
 
 ## Table of Contents
 
@@ -38,4 +34,3 @@ The table below is ordered chronologically.
 The table of contents generated in the notes are using <a href='https://github.com/thlorenz/doctoc'>doctoc</a>.
 
 The mathematical images generated in the notes are using <a href='https://github.com/leegao/readme2tex'>readme2tex</a>.
-
